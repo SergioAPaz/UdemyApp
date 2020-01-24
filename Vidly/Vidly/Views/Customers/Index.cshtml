@@ -11,13 +11,15 @@
     <thead>
         <tr>
             <th>Customer</th>
+            <th>Discount Rate</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var modelc in Model)
         {
             <tr>
-                <td>@Html.ActionLink(modelc.Name, "Details", "Customers", new { id = modelc.id }, null)</td>
+                <td>@Html.ActionLink(modelc.Name, "Details", "Customers", new { id = modelc.Id }, null)</td>
+                <td>@modelc.MemberShipType.Name</td>
             </tr>
         }
     </tbody>

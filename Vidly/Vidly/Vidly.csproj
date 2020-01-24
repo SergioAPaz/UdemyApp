@@ -203,11 +203,105 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001231953430_PrimerModelo.cs" />
+    <Compile Include="Migrations\202001231953430_PrimerModelo.Designer.cs">
+      <DependentUpon>202001231953430_PrimerModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001232151503_AddIsSuscribedToCustomer.cs" />
+    <Compile Include="Migrations\202001232151503_AddIsSuscribedToCustomer.Designer.cs">
+      <DependentUpon>202001232151503_AddIsSuscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001232202410_MemeberShipType.cs" />
+    <Compile Include="Migrations\202001232202410_MemeberShipType.Designer.cs">
+      <DependentUpon>202001232202410_MemeberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001232207342_MemeberShipType1.cs" />
+    <Compile Include="Migrations\202001232207342_MemeberShipType1.Designer.cs">
+      <DependentUpon>202001232207342_MemeberShipType1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001232210191_MemeberShipType2.cs" />
+    <Compile Include="Migrations\202001232210191_MemeberShipType2.Designer.cs">
+      <DependentUpon>202001232210191_MemeberShipType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001232211294_MemeberShipType3.cs" />
+    <Compile Include="Migrations\202001232211294_MemeberShipType3.Designer.cs">
+      <DependentUpon>202001232211294_MemeberShipType3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001232216398_populateMemberShipTypes.cs" />
+    <Compile Include="Migrations\202001232216398_populateMemberShipTypes.Designer.cs">
+      <DependentUpon>202001232216398_populateMemberShipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001232229161_ApplyAnnotationsToCustomerModel.cs" />
+    <Compile Include="Migrations\202001232229161_ApplyAnnotationsToCustomerModel.Designer.cs">
+      <DependentUpon>202001232229161_ApplyAnnotationsToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240035318_ModificationsToCustomerModel.cs" />
+    <Compile Include="Migrations\202001240035318_ModificationsToCustomerModel.Designer.cs">
+      <DependentUpon>202001240035318_ModificationsToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240044475_ModificationsToCustomerModel2.cs" />
+    <Compile Include="Migrations\202001240044475_ModificationsToCustomerModel2.Designer.cs">
+      <DependentUpon>202001240044475_ModificationsToCustomerModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240102008_ModificationsToCustomerModel3.cs" />
+    <Compile Include="Migrations\202001240102008_ModificationsToCustomerModel3.Designer.cs">
+      <DependentUpon>202001240102008_ModificationsToCustomerModel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240107467_ModificationsToCustomerModel4.cs" />
+    <Compile Include="Migrations\202001240107467_ModificationsToCustomerModel4.Designer.cs">
+      <DependentUpon>202001240107467_ModificationsToCustomerModel4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240110149_ModificationsToCustomerModel5.cs" />
+    <Compile Include="Migrations\202001240110149_ModificationsToCustomerModel5.Designer.cs">
+      <DependentUpon>202001240110149_ModificationsToCustomerModel5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240112094_ModificationsToCustomerModel6.cs" />
+    <Compile Include="Migrations\202001240112094_ModificationsToCustomerModel6.Designer.cs">
+      <DependentUpon>202001240112094_ModificationsToCustomerModel6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240151139_ModificationsToCustomerModel7.cs" />
+    <Compile Include="Migrations\202001240151139_ModificationsToCustomerModel7.Designer.cs">
+      <DependentUpon>202001240151139_ModificationsToCustomerModel7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240348121_AddedColumnNameToMamber.cs" />
+    <Compile Include="Migrations\202001240348121_AddedColumnNameToMamber.Designer.cs">
+      <DependentUpon>202001240348121_AddedColumnNameToMamber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240355133_UpdateTable.cs" />
+    <Compile Include="Migrations\202001240355133_UpdateTable.Designer.cs">
+      <DependentUpon>202001240355133_UpdateTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240424523_addBirthdayColumn.cs" />
+    <Compile Include="Migrations\202001240424523_addBirthdayColumn.Designer.cs">
+      <DependentUpon>202001240424523_addBirthdayColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240428569_addBirthdayColumn2.cs" />
+    <Compile Include="Migrations\202001240428569_addBirthdayColumn2.Designer.cs">
+      <DependentUpon>202001240428569_addBirthdayColumn2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240430460_addBirthdayColumn3.cs" />
+    <Compile Include="Migrations\202001240430460_addBirthdayColumn3.Designer.cs">
+      <DependentUpon>202001240430460_addBirthdayColumn3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240457189_addBirthdayColumn4.cs" />
+    <Compile Include="Migrations\202001240457189_addBirthdayColumn4.Designer.cs">
+      <DependentUpon>202001240457189_addBirthdayColumn4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240504183_addBirthdayColumn5.cs" />
+    <Compile Include="Migrations\202001240504183_addBirthdayColumn5.Designer.cs">
+      <DependentUpon>202001240504183_addBirthdayColumn5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240523308_addBirthdayColumn6.cs" />
+    <Compile Include="Migrations\202001240523308_addBirthdayColumn6.Designer.cs">
+      <DependentUpon>202001240523308_addBirthdayColumn6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomersViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MemberShipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -292,6 +386,77 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001231953430_PrimerModelo.resx">
+      <DependentUpon>202001231953430_PrimerModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001232151503_AddIsSuscribedToCustomer.resx">
+      <DependentUpon>202001232151503_AddIsSuscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001232202410_MemeberShipType.resx">
+      <DependentUpon>202001232202410_MemeberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001232207342_MemeberShipType1.resx">
+      <DependentUpon>202001232207342_MemeberShipType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001232210191_MemeberShipType2.resx">
+      <DependentUpon>202001232210191_MemeberShipType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001232211294_MemeberShipType3.resx">
+      <DependentUpon>202001232211294_MemeberShipType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001232216398_populateMemberShipTypes.resx">
+      <DependentUpon>202001232216398_populateMemberShipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001232229161_ApplyAnnotationsToCustomerModel.resx">
+      <DependentUpon>202001232229161_ApplyAnnotationsToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240035318_ModificationsToCustomerModel.resx">
+      <DependentUpon>202001240035318_ModificationsToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240044475_ModificationsToCustomerModel2.resx">
+      <DependentUpon>202001240044475_ModificationsToCustomerModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240102008_ModificationsToCustomerModel3.resx">
+      <DependentUpon>202001240102008_ModificationsToCustomerModel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240107467_ModificationsToCustomerModel4.resx">
+      <DependentUpon>202001240107467_ModificationsToCustomerModel4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240110149_ModificationsToCustomerModel5.resx">
+      <DependentUpon>202001240110149_ModificationsToCustomerModel5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240112094_ModificationsToCustomerModel6.resx">
+      <DependentUpon>202001240112094_ModificationsToCustomerModel6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240151139_ModificationsToCustomerModel7.resx">
+      <DependentUpon>202001240151139_ModificationsToCustomerModel7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240348121_AddedColumnNameToMamber.resx">
+      <DependentUpon>202001240348121_AddedColumnNameToMamber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240355133_UpdateTable.resx">
+      <DependentUpon>202001240355133_UpdateTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240424523_addBirthdayColumn.resx">
+      <DependentUpon>202001240424523_addBirthdayColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240428569_addBirthdayColumn2.resx">
+      <DependentUpon>202001240428569_addBirthdayColumn2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240430460_addBirthdayColumn3.resx">
+      <DependentUpon>202001240430460_addBirthdayColumn3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240457189_addBirthdayColumn4.resx">
+      <DependentUpon>202001240457189_addBirthdayColumn4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240504183_addBirthdayColumn5.resx">
+      <DependentUpon>202001240504183_addBirthdayColumn5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240523308_addBirthdayColumn6.resx">
+      <DependentUpon>202001240523308_addBirthdayColumn6.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

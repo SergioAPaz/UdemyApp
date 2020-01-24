@@ -5,6 +5,18 @@
 }
 @foreach (var modelc in Model)
 {
-    <span>@modelc.id</span>
-    <span>@modelc.Name</span>
-}
+
+    <h2>@modelc.Name</h2>
+    <ul>
+        <li>MemberShipType: @modelc.MemberShipType.Name</li>
+        
+
+        @if (@modelc.Birthday.HasValue && @modelc.Birthday > DateTime.Now.Date.AddYears(-50))
+        {
+            <li>BirthDay: @modelc.Birthday.Value.ToShortDateString()</li>
+
+        }
+
+
+    </ul>
+            }
