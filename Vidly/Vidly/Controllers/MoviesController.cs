@@ -10,51 +10,71 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies
-        public ActionResult Random()
-        {
-            var movie = new Movie() {
-                Name  ="Shrek"
-            };
-            //return View(movie);
-            var customers = new List<Customer>
-            {
-                new Customer {Name="Customer 1" },
-                new Customer {Name="Customer 2" }
-            };
+        private ApplicationDbContext _Cogntext;
 
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie=movie,
-                Customers=customers
-            };
-             
-            return View(viewModel);
+        public MoviesController()
+        {
+            _Cogntext = new ApplicationDbContext();
         }
-
-        public ActionResult Edit(int id)
+        protected override void Dispose(bool disposing)
         {
-            return Content("id=" + id);
+            _Cogntext.Dispose();
         }
 
 
-        public ActionResult Index(int? pageIndex, string sortBy)
+
+        public ActionResult Index()
         {
-            if (!pageIndex.HasValue)
+          
+                var details = _Cogntext.Movie.ToList();
+                return View(details);
+            
+          
+            
+           
+
+            //    if (!pageIndex.HasValue)
+            //    {
+            //        pageIndex = 1;
+            //    }
+            //    if (string.IsNullOrWhiteSpace(sortBy))
+            //    {
+            //        sortBy = "Name";
+            //    }
+            //    return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+
+
+        }
+
+
+
+        public ActionResult Details(int? id)
+        {
+            if (id.HasValue)
             {
-                pageIndex = 1;
+                var details = _Cogntext.Movie.Where(x => x.Id == id).ToList();
+                return View(details);
             }
-            if (string.IsNullOrWhiteSpace(sortBy))
+            else
             {
-                sortBy = "Name";
+                return Content("Falta indice");
             }
-            return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+
+
         }
 
-        public ActionResult ByReleaseDate(int year,int month)
-        {
-            return Content(year + "/" + month);
-        }
+
+
+
+
+        
+
+
+
+
+
+
+    
     }
 
 }

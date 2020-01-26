@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Vidly.Models.Movie>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+@foreach (var item in Model)
+{
+    <h2>@item.Name</h2>
+    <ul>
+        <li>Genre: @item.Genre</li>
+        <li>Release Date: @Convert.ToDateTime(@item.ReleaseDate).ToString("yyyy-MM-dd")</li>
+        <li>Date Added: @Convert.ToDateTime(@item.DateAdded).ToString("yyyy-MM-dd")</li>
+        <li>Number in stock: @item.Stock</li>
+    </ul>
+}

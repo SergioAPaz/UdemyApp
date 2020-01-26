@@ -12,6 +12,7 @@
         <tr>
             <th>Customer</th>
             <th>Discount Rate</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
             <tr>
                 <td>@Html.ActionLink(modelc.Name, "Details", "Customers", new { id = modelc.Id }, null)</td>
                 <td>@modelc.MemberShipType.Name</td>
+                <td>@Html.ActionLink("Edit", "Edit","Customers", new { id = modelc.Id }, new { @class="btn btn-primary btn-sm" })</td>
             </tr>
         }
     </tbody>
