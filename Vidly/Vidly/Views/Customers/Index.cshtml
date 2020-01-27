@@ -20,7 +20,7 @@
         {
             <tr>
                 <td>@Html.ActionLink(modelc.Name, "Details", "Customers", new { id = modelc.Id }, null)</td>
-                <td>@modelc.MemberShipType.Name</td>
+                <td>@modelc.MembershipType.Name</td>
                 <td>@Html.ActionLink("Edit", "Edit","Customers", new { id = modelc.Id }, new { @class="btn btn-primary btn-sm" })</td>
             </tr>
         }

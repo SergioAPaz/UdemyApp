@@ -8,7 +8,7 @@
 
     <h2>@modelc.Name</h2>
     <ul>
-        <li>MemberShipType: @modelc.MemberShipType.Name</li>
+        <li>MemberShipType: @modelc.MembershipType.Name</li>
         
 
         @if (@modelc.Birthday.HasValue && @modelc.Birthday > DateTime.Now.Date.AddYears(-50))
