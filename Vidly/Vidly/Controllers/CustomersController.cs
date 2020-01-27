@@ -26,7 +26,7 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var ListaCustomers = _Context.Customers.Include(c => c.MemberShipType).ToList();
+            var ListaCustomers = _Context.Customers.Include(c => c.MembershipType).ToList();
 
 
             return View(ListaCustomers);
@@ -48,14 +48,14 @@ namespace Vidly.Controllers
         {
             if (VM.Customer.Id != null)
             {
-                if (VM.Customer.Birthday.HasValue && VM.Customer.MemberShipType.Id != 0 && VM.Customer.Name != null)
+                if (VM.Customer.Birthday.HasValue && VM.Customer.MembershipTypeId != 0 && VM.Customer.Name != null)
                 {
                     var customeridToUpdate = _Context.Customers.Single(c => c.Id == VM.Customer.Id);
 
                     customeridToUpdate.Name = VM.Customer.Name;
                     customeridToUpdate.Birthday = VM.Customer.Birthday;
+                    customeridToUpdate.MembershipTypeId = VM.Customer.MembershipTypeId;
                     customeridToUpdate.IsSubscribedToNewsletter = VM.Customer.IsSubscribedToNewsletter;
-
 
                     _Context.SaveChanges();
                     return RedirectToAction("Index");

@@ -7,7 +7,7 @@ namespace Vidly.ViewModels
 {
     public class NewCustomerViewModel
     {
-        public List<MemberShipType> MemberShipType  { get; set; }
+        public List<MembershipType> MemberShipType  { get; set; }
         public Customer Customer { get; set; }
     }
 }

@@ -5,9 +5,9 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 namespace Vidly.Models
 {
-    public class MemberShipType
+    public class MembershipType
     {
-        public int Id { get; set; }
+        public byte Id { get; set; }
 
         [StringLength(1000)]
         public string Name { get; set; }
