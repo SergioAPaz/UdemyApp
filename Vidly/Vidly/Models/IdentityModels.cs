@@ -23,6 +23,7 @@ namespace Vidly.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movie> Movie { get; set; }
         public DbSet<MembershipType> MemberShiptype { get; set; }
+        public DbSet<Food> Foot { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

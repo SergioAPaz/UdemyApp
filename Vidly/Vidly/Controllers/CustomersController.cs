@@ -96,25 +96,7 @@ namespace Vidly.Controllers
 
         }
 
-        //[HttpPost]
-        //public ActionResult Edit()
-        //{
-
-        //    return RedirectToAction("Index");
-        //}
-
-
-        //public ActionResult Details(int id)
-        //{
-
-        //    var customer = _Context.Customers.Include(c => c.MemberShipType).Where(c => c.Id == id);
-
-        //    if (customer == null)
-        //        return HttpNotFound();
-
-        //    return View(customer);
-        //}
-
+   
 
     }
 }
