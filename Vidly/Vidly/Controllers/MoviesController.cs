@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        private EntitydataModel1 _Context;
-
+        private EntitydataModel1 _Context = new EntitydataModel1();
         public MoviesController()
         {
             _Context = new EntitydataModel1();
@@ -25,13 +25,13 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-          
-                var details = _Context.Movie.ToList();
-                return View(details);
-            
-          
-            
-           
+            //var movie = _Context.Movie.Include(c => c.Genre);
+            //return View();
+
+            var movie = _Context.Movie.Include(m => m.Genre);
+            return View(movie.ToList());
+
+
 
             //    if (!pageIndex.HasValue)
             //    {
@@ -55,7 +55,7 @@ namespace Vidly.Controllers
 
 
             //return View(viewModel);
-            ViewBag.MembershipTypeId = new SelectList(_Context.MemberShiptype, "Id", "Name");
+            ViewBag.GenreId = new SelectList(_Context.Genres, "Id", "Name");
             return View();
 
         }
@@ -72,7 +72,7 @@ namespace Vidly.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MembershipTypeId = new SelectList(_Context.MemberShiptype, "Id", "Name", VM.MembershipTypeId);
+            ViewBag.GenreId = new SelectList(_Context.Genres, "Id", "Name", VM.GenreId);
             return View(VM);
         }
 
@@ -90,7 +90,7 @@ namespace Vidly.Controllers
                     var nc = new ViewmodelMovie()
                     {
                         Movies = data,
-                        MembershipType = _Context.MemberShiptype.ToList()
+                        Genres = _Context.Genres.ToList()
                     };
                     return View(nc);
                 }
@@ -108,13 +108,13 @@ namespace Vidly.Controllers
         {
             if (VMMovie.Movies.Id != null)
             {
-                if (VMMovie.Movies.Name != null && VMMovie.Movies.MembershipTypeId != 0 && VMMovie.Movies.Stock.HasValue)
+                if (VMMovie.Movies.Name != null && VMMovie.Movies.GenreId != 0 && VMMovie.Movies.Stock.HasValue)
                 {
                     var customeridToUpdate = _Context.Movie.Single(c => c.Id == VMMovie.Movies.Id);
 
                     customeridToUpdate.Name = VMMovie.Movies.Name;
                     customeridToUpdate.ReleaseDate = VMMovie.Movies.ReleaseDate;
-                    customeridToUpdate.MembershipTypeId = VMMovie.Movies.MembershipTypeId;
+                    customeridToUpdate.GenreId = VMMovie.Movies.GenreId;
                     customeridToUpdate.Stock = VMMovie.Movies.Stock;
 
                     _Context.SaveChanges();

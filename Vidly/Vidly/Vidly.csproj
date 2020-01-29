@@ -203,6 +203,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Movies11111Controller.cs" />
+    <Compile Include="Controllers\Movies12222222222Controller.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -279,6 +280,10 @@
     <Compile Include="Migrations\EntitydataModel1\202001290028080_ModifiyingMovieModel2.cs" />
     <Compile Include="Migrations\EntitydataModel1\202001290028080_ModifiyingMovieModel2.Designer.cs">
       <DependentUpon>202001290028080_ModifiyingMovieModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\EntitydataModel1\202001290129416_ModifiyingFKMovieGender.cs" />
+    <Compile Include="Migrations\EntitydataModel1\202001290129416_ModifiyingFKMovieGender.Designer.cs">
+      <DependentUpon>202001290129416_ModifiyingFKMovieGender.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\EntitydataModel1\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -383,6 +388,11 @@
     <Content Include="Views\Movies11111\Details.cshtml" />
     <Content Include="Views\Movies11111\Edit.cshtml" />
     <Content Include="Views\Movies11111\Index.cshtml" />
+    <Content Include="Views\Movies12222222222\Create.cshtml" />
+    <Content Include="Views\Movies12222222222\Delete.cshtml" />
+    <Content Include="Views\Movies12222222222\Details.cshtml" />
+    <Content Include="Views\Movies12222222222\Edit.cshtml" />
+    <Content Include="Views\Movies12222222222\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -449,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\EntitydataModel1\202001290028080_ModifiyingMovieModel2.resx">
       <DependentUpon>202001290028080_ModifiyingMovieModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\EntitydataModel1\202001290129416_ModifiyingFKMovieGender.resx">
+      <DependentUpon>202001290129416_ModifiyingFKMovieGender.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

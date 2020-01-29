@@ -24,7 +24,7 @@
         {
             <tr>
                 <td>@Html.ActionLink(modelc.Name, "Details", "Movies", new { id = modelc.Id }, null)</td>
-                <td>@modelc.Genre</td>
+                <td>@modelc.Genre.Name</td>
                 <td>@Html.ActionLink(modelc.Name, "SaveNewMovie", "Movies", new { id = modelc.Id },  new { @class="btn btn-primary" })</td>
             </tr>
         }

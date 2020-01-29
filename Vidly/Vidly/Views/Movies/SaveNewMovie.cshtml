@@ -38,7 +38,7 @@
             <label>Genre</label>
             <div class="col-md-10">
 
-                @Html.DropDownListFor(m => m.Movies.MembershipTypeId, new SelectList(Model.MembershipType, "Id", "Name"), "Select", new { @class = "text-danger" })
+                @Html.DropDownListFor(m => m.Movies.GenreId, new SelectList(Model.Genres, "Id", "Name"), "Select", new { @class = "text-danger" })
             </div>
         </div>
 

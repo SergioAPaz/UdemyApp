@@ -10,18 +10,18 @@ using Vidly.Models;
 
 namespace Vidly.Controllers
 {
-    public class Movies11111Controller : Controller
+    public class Movies12222222222Controller : Controller
     {
         private EntitydataModel1 db = new EntitydataModel1();
 
-        // GET: Movies11111
+        // GET: Movies12222222222
         public ActionResult Index()
         {
             var movie = db.Movie.Include(m => m.Genre);
             return View(movie.ToList());
         }
 
-        // GET: Movies11111/Details/5
+        // GET: Movies12222222222/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,19 +36,19 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
-        // GET: Movies11111/Create
+        // GET: Movies12222222222/Create
         public ActionResult Create()
         {
-            ViewBag.MembershipTypeId = new SelectList(db.MemberShiptype, "Id", "Name");
+            ViewBag.GenreId = new SelectList(db.Genres, "Id", "Name");
             return View();
         }
 
-        // POST: Movies11111/Create
+        // POST: Movies12222222222/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Genre,ReleaseDate,DateAdded,Stock,MembershipTypeId")] Movie movie)
+        public ActionResult Create([Bind(Include = "Id,Name,ReleaseDate,DateAdded,Stock,GenreId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -57,11 +57,11 @@ namespace Vidly.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MembershipTypeId = new SelectList(db.MemberShiptype, "Id", "Name", movie.GenreId);
+            ViewBag.GenreId = new SelectList(db.Genres, "Id", "Name", movie.GenreId);
             return View(movie);
         }
 
-        // GET: Movies11111/Edit/5
+        // GET: Movies12222222222/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,16 +73,16 @@ namespace Vidly.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.MembershipTypeId = new SelectList(db.MemberShiptype, "Id", "Name", movie.GenreId);
+            ViewBag.GenreId = new SelectList(db.Genres, "Id", "Name", movie.GenreId);
             return View(movie);
         }
 
-        // POST: Movies11111/Edit/5
+        // POST: Movies12222222222/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Genre,ReleaseDate,DateAdded,Stock,MembershipTypeId")] Movie movie)
+        public ActionResult Edit([Bind(Include = "Id,Name,ReleaseDate,DateAdded,Stock,GenreId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -90,11 +90,11 @@ namespace Vidly.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MembershipTypeId = new SelectList(db.MemberShiptype, "Id", "Name", movie.GenreId);
+            ViewBag.GenreId = new SelectList(db.Genres, "Id", "Name", movie.GenreId);
             return View(movie);
         }
 
-        // GET: Movies11111/Delete/5
+        // GET: Movies12222222222/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -109,7 +109,7 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
-        // POST: Movies11111/Delete/5
+        // POST: Movies12222222222/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
