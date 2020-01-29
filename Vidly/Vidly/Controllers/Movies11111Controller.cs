@@ -7,121 +7,115 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
-using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
-    public class FoodsController : Controller
+    public class Movies11111Controller : Controller
     {
         private EntitydataModel1 db = new EntitydataModel1();
 
-        // GET: Foods
+        // GET: Movies11111
         public ActionResult Index()
         {
-            return View(db.Foot.Include(m => m.MembershipType).ToList());
+            var movie = db.Movie.Include(m => m.MembershipType);
+            return View(movie.ToList());
         }
 
-        // GET: Foods/Details/5
+        // GET: Movies11111/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Food food = db.Foot.Find(id);
-            if (food == null)
+            Movie movie = db.Movie.Find(id);
+            if (movie == null)
             {
                 return HttpNotFound();
             }
-            return View(food);
+            return View(movie);
         }
 
-        // GET: Foods/Create
+        // GET: Movies11111/Create
         public ActionResult Create()
         {
+            ViewBag.MembershipTypeId = new SelectList(db.MemberShiptype, "Id", "Name");
             return View();
         }
 
-        // POST: Foods/Create
+        // POST: Movies11111/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Stock,Price,CreationDate")] Food food)
+        public ActionResult Create([Bind(Include = "Id,Name,Genre,ReleaseDate,DateAdded,Stock,MembershipTypeId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                db.Foot.Add(food);
+                db.Movie.Add(movie);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(food);
+            ViewBag.MembershipTypeId = new SelectList(db.MemberShiptype, "Id", "Name", movie.MembershipTypeId);
+            return View(movie);
         }
 
-        // GET: Foods/Edit/5
+        // GET: Movies11111/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var data = db.Foot.SingleOrDefault(f => f.Id == id);
-            if (data != null)
+            Movie movie = db.Movie.Find(id);
+            if (movie == null)
             {
-               
-                var viewmodel = new FoodEditionViewModel
-                {
-                    Food = data,
-                    MembershipType = db.MemberShiptype.ToList()
-                };
-                return View("Edit", viewmodel);
+                return HttpNotFound();
             }
-            else
-            {
-               return HttpNotFound();
-            }
-            
+            ViewBag.MembershipTypeId = new SelectList(db.MemberShiptype, "Id", "Name", movie.MembershipTypeId);
+            return View(movie);
         }
 
-        // POST: Foods/Edit/5
+        // POST: Movies11111/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Stock,Price,CreationDate")] Food food)
+        public ActionResult Edit([Bind(Include = "Id,Name,Genre,ReleaseDate,DateAdded,Stock,MembershipTypeId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(food).State = EntityState.Modified;
+                db.Entry(movie).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(food);
+            ViewBag.MembershipTypeId = new SelectList(db.MemberShiptype, "Id", "Name", movie.MembershipTypeId);
+            return View(movie);
         }
 
-        // GET: Foods/Delete/5
+        // GET: Movies11111/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Food food = db.Foot.Find(id);
-            if (food == null)
+            Movie movie = db.Movie.Find(id);
+            if (movie == null)
             {
                 return HttpNotFound();
             }
-            return View(food);
+            return View(movie);
         }
 
-        // POST: Foods/Delete/5
+        // POST: Movies11111/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Food food = db.Foot.Find(id);
-            db.Foot.Remove(food);
+            Movie movie = db.Movie.Find(id);
+            db.Movie.Remove(movie);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

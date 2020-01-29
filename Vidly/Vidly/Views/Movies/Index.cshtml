@@ -6,12 +6,17 @@
 
 <h2>Movies</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
 
 <table class="table table-bordered">
     <thead>
         <tr>
             <th>Movie</th>
             <th>Genre</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +25,7 @@
             <tr>
                 <td>@Html.ActionLink(modelc.Name, "Details", "Movies", new { id = modelc.Id }, null)</td>
                 <td>@modelc.Genre</td>
+                <td>@Html.ActionLink(modelc.Name, "SaveNewMovie", "Movies", new { id = modelc.Id },  new { @class="btn btn-primary" })</td>
             </tr>
         }
     </tbody>

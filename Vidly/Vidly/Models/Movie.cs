@@ -13,5 +13,8 @@ namespace Vidly.Models
         public DateTime? ReleaseDate { get; set; }
         public DateTime? DateAdded { get; set; }
         public int? Stock { get; set; }
+
+        public MembershipType MembershipType { get; set; }
+        public int MembershipTypeId { get; set; }
     }
 }

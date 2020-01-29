@@ -11,11 +11,11 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-        private ApplicationDbContext _Context;
+        private EntitydataModel1 _Context;
 
         public CustomersController()
         {
-            _Context = new ApplicationDbContext();
+            _Context = new EntitydataModel1();
         }
         protected override void Dispose(bool disposing)
         {
@@ -74,6 +74,42 @@ namespace Vidly.Controllers
 
         }
 
+
+        public ActionResult SaveNewCustomer(int? id)
+        {
+            if (id==null)
+            {
+                HttpNotFound();
+            }
+            else
+            {
+                var data = _Context.Customers.SingleOrDefault(c => c.Id == id);
+                if (data != null)
+                {
+                    var nc = new NewCustomerViewModel()
+                    {
+                        Customer = data,
+                        MemberShipType = _Context.MemberShiptype.ToList()
+                    };
+                    return View(nc);
+                }
+                else
+                {
+                    HttpNotFound();
+                }
+            }
+
+            return View();
+        }
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult SaveNewCustomer()
+        //{
+
+
+        //    return RedirectToAction("Index");
+        //}
 
         public ActionResult Edit(int id)
         {

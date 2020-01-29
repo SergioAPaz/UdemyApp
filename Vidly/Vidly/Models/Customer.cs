@@ -22,6 +22,7 @@ namespace Vidly.Models
 
         [Display(Name="Date of birth")]
         public DateTime? Birthday { get; set; }
-       
+
+        public int MyPropertys { get; set; }
     }
 }

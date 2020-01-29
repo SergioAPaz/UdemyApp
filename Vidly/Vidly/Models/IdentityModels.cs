@@ -24,6 +24,7 @@ namespace Vidly.Models
         public DbSet<Movie> Movie { get; set; }
         public DbSet<MembershipType> MemberShiptype { get; set; }
         public DbSet<Food> Foot { get; set; }
+        public DbSet<Animal> Animals { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -35,4 +36,24 @@ namespace Vidly.Models
             return new ApplicationDbContext();
         }
     }
+
+
+    //public class ApplicationDbContextToSql : IdentityDbContext<ApplicationUser>
+    //{
+    //    public DbSet<Customer> Customers { get; set; }
+    //    public DbSet<Movie> Movie { get; set; }
+    //    public DbSet<MembershipType> MemberShiptype { get; set; }
+    //    public DbSet<Food> Foot { get; set; }
+    //    public DbSet<Animal> Animals { get; set; }
+
+    //    public ApplicationDbContextToSql()
+    //        : base("EntitydataModel1", throwIfV1Schema: false)
+    //    {
+    //    }
+
+    //    public static ApplicationDbContextToSql Create()
+    //    {
+    //        return new ApplicationDbContextToSql();
+    //    }
+    //}
 }

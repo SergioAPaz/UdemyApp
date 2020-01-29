@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -200,6 +202,7 @@
     <Compile Include="Controllers\FoodsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Movies11111Controller.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -228,11 +231,63 @@
     <Compile Include="Migrations\202001280143343_NewTableFoot2AddingColumnDate3.Designer.cs">
       <DependentUpon>202001280143343_NewTableFoot2AddingColumnDate3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001281633295_one.cs" />
+    <Compile Include="Migrations\202001281633295_one.Designer.cs">
+      <DependentUpon>202001281633295_one.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001281634469_two.cs" />
+    <Compile Include="Migrations\202001281634469_two.Designer.cs">
+      <DependentUpon>202001281634469_two.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001281636080_three.cs" />
+    <Compile Include="Migrations\202001281636080_three.Designer.cs">
+      <DependentUpon>202001281636080_three.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001281700513_fourth.cs" />
+    <Compile Include="Migrations\202001281700513_fourth.Designer.cs">
+      <DependentUpon>202001281700513_fourth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001281714427_fourth1.cs" />
+    <Compile Include="Migrations\202001281714427_fourth1.Designer.cs">
+      <DependentUpon>202001281714427_fourth1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001281721015_test1.cs" />
+    <Compile Include="Migrations\202001281721015_test1.Designer.cs">
+      <DependentUpon>202001281721015_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001281728006_test14.cs" />
+    <Compile Include="Migrations\202001281728006_test14.Designer.cs">
+      <DependentUpon>202001281728006_test14.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\EntitydataModel1\202001281741196_addAnimalTblToSQL.cs" />
+    <Compile Include="Migrations\EntitydataModel1\202001281741196_addAnimalTblToSQL.Designer.cs">
+      <DependentUpon>202001281741196_addAnimalTblToSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\EntitydataModel1\202001282004469_addAllTables.cs" />
+    <Compile Include="Migrations\EntitydataModel1\202001282004469_addAllTables.Designer.cs">
+      <DependentUpon>202001282004469_addAllTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\EntitydataModel1\202001282158337_addGenres.cs" />
+    <Compile Include="Migrations\EntitydataModel1\202001282158337_addGenres.Designer.cs">
+      <DependentUpon>202001282158337_addGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\EntitydataModel1\202001282212124_ModifiyingMovieModel.cs" />
+    <Compile Include="Migrations\EntitydataModel1\202001282212124_ModifiyingMovieModel.Designer.cs">
+      <DependentUpon>202001282212124_ModifiyingMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\EntitydataModel1\202001290028080_ModifiyingMovieModel2.cs" />
+    <Compile Include="Migrations\EntitydataModel1\202001290028080_ModifiyingMovieModel2.Designer.cs">
+      <DependentUpon>202001290028080_ModifiyingMovieModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\EntitydataModel1\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomersViewModel.cs" />
+    <Compile Include="Models\EntitydataModel1.cs" />
     <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -242,6 +297,7 @@
     <Compile Include="ViewModels\FoodEditionViewModel.cs" />
     <Compile Include="ViewModels\NewCustomerViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
+    <Compile Include="ViewModels\ViewmodelMovie.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -319,6 +375,14 @@
     <Content Include="Views\Foods\Details.cshtml" />
     <Content Include="Views\Foods\Edit.cshtml" />
     <Content Include="Views\Foods\Index.cshtml" />
+    <Content Include="Views\Customers\SaveNewCustomer.cshtml" />
+    <Content Include="Views\Movies\SaveNewMovie.cshtml" />
+    <Content Include="Views\Movies\Create.cshtml" />
+    <Content Include="Views\Movies11111\Create.cshtml" />
+    <Content Include="Views\Movies11111\Delete.cshtml" />
+    <Content Include="Views\Movies11111\Details.cshtml" />
+    <Content Include="Views\Movies11111\Edit.cshtml" />
+    <Content Include="Views\Movies11111\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -349,6 +413,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001280143343_NewTableFoot2AddingColumnDate3.resx">
       <DependentUpon>202001280143343_NewTableFoot2AddingColumnDate3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001281633295_one.resx">
+      <DependentUpon>202001281633295_one.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001281634469_two.resx">
+      <DependentUpon>202001281634469_two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001281636080_three.resx">
+      <DependentUpon>202001281636080_three.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001281700513_fourth.resx">
+      <DependentUpon>202001281700513_fourth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001281714427_fourth1.resx">
+      <DependentUpon>202001281714427_fourth1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001281721015_test1.resx">
+      <DependentUpon>202001281721015_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001281728006_test14.resx">
+      <DependentUpon>202001281728006_test14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\EntitydataModel1\202001281741196_addAnimalTblToSQL.resx">
+      <DependentUpon>202001281741196_addAnimalTblToSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\EntitydataModel1\202001282004469_addAllTables.resx">
+      <DependentUpon>202001282004469_addAllTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\EntitydataModel1\202001282158337_addGenres.resx">
+      <DependentUpon>202001282158337_addGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\EntitydataModel1\202001282212124_ModifiyingMovieModel.resx">
+      <DependentUpon>202001282212124_ModifiyingMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\EntitydataModel1\202001290028080_ModifiyingMovieModel2.resx">
+      <DependentUpon>202001290028080_ModifiyingMovieModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
